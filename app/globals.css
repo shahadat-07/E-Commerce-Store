@@ -8,3 +8,11 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
+.swiper-pagination-bullet {
+  height: 17px !important;
+  width: 17px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #eda415 !important;
+}

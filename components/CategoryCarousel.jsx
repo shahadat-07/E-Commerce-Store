@@ -30,7 +30,7 @@ const CategoryCarousel = ({ items }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative mb-section-gap">
       <button
         className="text-gray-800 bg-gray-300 hover:bg-gray-400 rounded-full p-2 absolute top-1/2 transform -translate-y-1/2 left-2"
         onClick={handlePrevSlide}
@@ -46,43 +46,45 @@ const CategoryCarousel = ({ items }) => {
       <div className="flex justify-center mt-4">
         {getVisibleItems().map((item, index) => (
           <Transition
+            unmount={false}
             key={index}
             show={true}
             appear={false}
-            unmount={false}
             enter="transform transition ease-in-out duration-500"
             enterFrom={
               moving === "right"
-                ? `translate-x-96 opacity-0`
-                : `-translate-x-96 opacity-0`
+                ? "-translate-x-[300px] opacity-0"
+                : "translate-x-[300px] opacity-0"
             }
-            enterTo={`translate-x-0 opacity-100`}
-            leave="transform transition ease-in-out duration-500 "
-            leaveFrom={`translate-x-0 opacity-100`}
+            enterTo="translate-x-0 opacity-100"
+            leave="transform transition ease-in-out duration-500"
+            leaveFrom="translate-x-0 opacity-100"
             leaveTo={
               moving === "right"
-                ? `-translate-x-full opacity-0`
-                : `translate-x-full opacity-0`
+                ? "translate-x-[300px] opacity-0"
+                : "-translate-x-[300px] opacity-0"
             }
           >
-            <div key={index} className="w-full px-4">
-              <div className="bg-white flex border border-tertiary rounded-lg">
-                <div className="relative">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={150}
-                    height={75}
-                  />
-                </div>
-                <div className="p-4">
-                  <p className="text-primary text-base font-bold">
-                    {item.description}
-                  </p>
-                  <p className="text-primary text-sm">(6 items)</p>
+            {(ref) => (
+              <div ref={ref} className="w-full px-4">
+                <div className="bg-white flex border border-tertiary rounded-lg">
+                  <div className="relative">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      width={150}
+                      height={75}
+                    />
+                  </div>
+                  <div className="p-4">
+                    <p className="text-primary text-base font-bold">
+                      {item.description}
+                    </p>
+                    <p className="text-primary text-sm">(6 items)</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </Transition>
         ))}
       </div>
@@ -97,7 +99,6 @@ const HomePage = () => {
       image: "/hero-img.png",
       description: "Laptop & Desktop",
     },
-
     {
       title: "Item 8",
       image: "/hero-img.png",

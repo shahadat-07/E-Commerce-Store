@@ -1,11 +1,12 @@
-import { HeroCarousel, CategoryCarousel } from "@/components";
-import Image from "next/image";
+import { HeroCarousel, CategoryCarousel, Testimonials } from "@/components";
 
 export default function Home() {
   return (
     <main className="">
+      {/* <LandingPage /> */}
       <HeroCarousel />
       <CategoryCarousel />
+      <Testimonials />
     </main>
   );
 }

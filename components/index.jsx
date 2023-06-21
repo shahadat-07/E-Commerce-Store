@@ -5,6 +5,7 @@ import SearchBar from "./Header/SearchBar";
 import TopCartHeader from "./Header/TopCartHeader";
 import HeroCarousel from "./HeroCarousel";
 import CategoryCarousel from "./CategoryCarousel";
+import Testimonials from "./Testimonials/Testimonials";
 
 export {
   TopBar,
@@ -14,4 +15,5 @@ export {
   SearchBar,
   HeroCarousel,
   CategoryCarousel,
+  Testimonials,
 };

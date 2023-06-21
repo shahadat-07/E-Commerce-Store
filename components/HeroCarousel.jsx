@@ -16,7 +16,7 @@ const HeroCarousel = ({ products }) => {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center mt-10">
+    <div className="flex flex-col lg:flex-row items-center justify-center mt-10 mb-section-gap">
       <div className="flex flex-col items-center lg:items-start">
         <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-primary">
           {products[activeIndex].name}
