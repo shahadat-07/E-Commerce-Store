@@ -1,136 +1,82 @@
 "use client";
-import React, { useState } from "react";
 import Image from "next/image";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-import { Transition } from "@headlessui/react";
+import { Navigation, A11y } from "swiper";
 
-const CategoryCarousel = ({ items }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [moving, setMoving] = useState("right");
+import { Swiper, SwiperSlide } from "swiper/react";
 
-  const handlePrevSlide = () => {
-    setMoving("left");
-    setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? items.length - 3 : prevIndex - 1
-    );
-  };
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
 
-  const handleNextSlide = () => {
-    setMoving("right");
-    setActiveIndex((prevIndex) =>
-      prevIndex === items.length - 3 ? 0 : prevIndex + 1
-    );
-  };
+const items = [
+  {
+    title: "Laptop & Desktop",
+    image: "/hero-img.png",
+    quantity: "6",
+  },
+  {
+    title: "Speaker",
+    image: "/hero-img.png",
+    quantity: "6",
+  },
+  {
+    title: "DSLR Camera",
+    image: "/hero-img.png",
+    quantity: "6",
+  },
+  {
+    title: "Headphone",
+    image: "/hero-img.png",
+    quantity: "6",
+  },
+];
 
-  const getVisibleItems = () => {
-    const firstIndex = activeIndex;
-    const lastIndex = activeIndex + 2;
-    return items.slice(firstIndex, lastIndex + 1);
-  };
-
+const CategoryCarousel = () => {
   return (
-    <div className="relative mb-section-gap">
-      <button
-        className="text-gray-800 bg-gray-300 hover:bg-gray-400 rounded-full p-2 absolute top-1/2 transform -translate-y-1/2 left-2"
-        onClick={handlePrevSlide}
+    <section className="container mx-auto mb-section-gap">
+      <Swiper
+        modules={[Navigation, A11y]}
+        spaceBetween={50}
+        slidesPerView={3}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log("")}
+        onSlideChange={() => console.log("")}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }}
       >
-        <FaChevronLeft className="w-4 h-4" />
-      </button>
-      <button
-        className="text-gray-800 bg-gray-300 hover:bg-gray-400 rounded-full p-2 absolute top-1/2 transform -translate-y-1/2 right-2"
-        onClick={handleNextSlide}
-      >
-        <FaChevronRight className="w-4 h-4" />
-      </button>
-      <div className="flex justify-center mt-4">
-        {getVisibleItems().map((item, index) => (
-          <Transition
-            unmount={false}
-            key={index}
-            show={true}
-            appear={false}
-            enter="transform transition ease-in-out duration-500"
-            enterFrom={
-              moving === "right"
-                ? "-translate-x-[300px] opacity-0"
-                : "translate-x-[300px] opacity-0"
-            }
-            enterTo="translate-x-0 opacity-100"
-            leave="transform transition ease-in-out duration-500"
-            leaveFrom="translate-x-0 opacity-100"
-            leaveTo={
-              moving === "right"
-                ? "translate-x-[300px] opacity-0"
-                : "-translate-x-[300px] opacity-0"
-            }
-          >
-            {(ref) => (
-              <div ref={ref} className="w-full px-4">
-                <div className="bg-white flex border border-tertiary rounded-lg">
-                  <div className="relative">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      width={150}
-                      height={75}
-                    />
-                  </div>
-                  <div className="p-4">
-                    <p className="text-primary text-base font-bold">
-                      {item.description}
-                    </p>
-                    <p className="text-primary text-sm">(6 items)</p>
-                  </div>
-                </div>
+        {items.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex items-center py-4 gap-8 border border-tertiary rounded-xl hover:cursor-grab">
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={120}
+                height={120}
+              />
+              <div>
+                <h3 className="text-lg text-primary">{item.title}</h3>
+                <p className="text-primary text-sm">{`(${item.quantity} items)`}</p>
               </div>
-            )}
-          </Transition>
+            </div>
+          </SwiperSlide>
         ))}
-      </div>
-    </div>
+      </Swiper>
+    </section>
   );
 };
 
-const HomePage = () => {
-  const items = [
-    {
-      title: "Item 1",
-      image: "/hero-img.png",
-      description: "Laptop & Desktop",
-    },
-    {
-      title: "Item 8",
-      image: "/hero-img.png",
-      description: "Head Phone",
-    },
-    {
-      title: "Item 9",
-      image: "/hero-img.png",
-      description: "Head Phone",
-    },
-    {
-      title: "Item 2",
-      image: "/hero-img.png",
-      description: "Laptop & Desktop",
-    },
-    {
-      title: "Item 6",
-      image: "/hero-img.png",
-      description: "Smart Phone",
-    },
-    {
-      title: "Item 7",
-      image: "/hero-img.png",
-      description: "Head Phone",
-    },
-  ];
-
-  return (
-    <div className="container mx-auto my-8">
-      <CategoryCarousel items={items} />
-    </div>
-  );
-};
-
-export default HomePage;
+export default CategoryCarousel;

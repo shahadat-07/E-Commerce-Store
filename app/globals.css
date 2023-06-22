@@ -16,3 +16,17 @@
 .swiper-pagination-bullet-active {
   background-color: #eda415 !important;
 }
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  content: "";
+  background: gainsboro; /* Set the background color here */
+  border-radius: 50%; /* Make it circular */
+  width: 30px; /* Adjust the width of the circle */
+  height: 30px; /* Adjust the height of the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 15px !important;
+}
