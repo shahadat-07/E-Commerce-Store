@@ -10,8 +10,8 @@
 }
 
 .swiper-pagination-bullet {
-  height: 17px !important;
-  width: 17px !important;
+  height: 15px !important;
+  width: 15px !important;
 }
 .swiper-pagination-bullet-active {
   background-color: #eda415 !important;

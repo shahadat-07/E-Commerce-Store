@@ -1,12 +1,19 @@
-import { HeroCarousel, CategoryCarousel, Testimonials } from "@/components";
+import {
+  HeroCarousel,
+  CategoryCarousel,
+  Testimonials,
+  Features,
+  Sponsored,
+} from "@/components";
 
 export default function Home() {
   return (
     <main className="">
-      {/* <LandingPage /> */}
       <HeroCarousel />
       <CategoryCarousel />
+      <Features />
       <Testimonials />
+      <Sponsored />
     </main>
   );
 }

@@ -11,7 +11,7 @@ module.exports = {
         primary: "#003F62",
         secondary: "#EDA415",
         tertiary: "#A5A5A5",
-        primaryLight: "#E2F4FF",
+        "primary-light": "#E2F4FF",
       },
       margin: {
         "section-gap": "56px",

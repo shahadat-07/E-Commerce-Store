@@ -33,18 +33,25 @@ const Testimonials = () => {
             spaceBetween: 30,
           },
         }}
+        style={{ paddingBottom: "50px" }}
       >
         <SwiperSlide>
-          <Testimonial name="Savannah Nguyen" img="/c-3.png" />
+          <Testimonial name="Savannah Nguyen" img="/client-1.png" />
         </SwiperSlide>
         <SwiperSlide>
-          <Testimonial name="Esther Howard" img="/c-2.png" />
+          <Testimonial name="Esther Howard" img="/client-4.png" />
         </SwiperSlide>
         <SwiperSlide>
-          <Testimonial name="Esther Howard" img="/c-3.png" />
+          <Testimonial name="Esther Howard" img="/client-2.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <Testimonial name="Howard" img="/c-3.png" />
+          <Testimonial name="Howard" img="/client-3.png" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Testimonial name="Esther Howard" img="/client-5.png" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Testimonial name="Howard" img="/client-4.png" />
         </SwiperSlide>
       </Swiper>
     </section>

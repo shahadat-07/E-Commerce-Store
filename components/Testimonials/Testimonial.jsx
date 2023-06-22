@@ -7,11 +7,11 @@ const Testimonial = ({ name, img }) => {
       <div class="flex flex-col md:flex-row gap-6">
         <div class="md:w-1/4">
           <Image
-            width={50}
-            height={50}
+            width={100}
+            height={100}
             src={img}
             alt="Next Image"
-            class="w-full h-auto md:mr-4"
+            class="w-full h-auto md:mr-4 rounded-full"
           />
         </div>
         <div class="md:w-3/4 flex items-center">
@@ -19,7 +19,7 @@ const Testimonial = ({ name, img }) => {
         </div>
       </div>
       <div class="mt-5">
-        <p class="text-sm bg-primaryLight text-primary rounded-xl px-6 py-3">
+        <p class="text-sm bg-primary-light text-primary rounded-xl px-6 py-3">
           Lorem ipsum dolor sit amet consectetur. Nec sit enim tellus faucibus
           bibendum ullamcorper. Phasellus tristique aenean at lorem sed
           scelerisque.
