@@ -10,6 +10,7 @@ import Features from "./Features";
 import Sponsored from "./Sponsored";
 import PopularProducts from "./PopularProducts";
 import LatestNews from "./LatestNews/LatestNews";
+import Promotion from "./Promotion";
 
 export {
   TopBar,
@@ -24,4 +25,5 @@ export {
   Sponsored,
   PopularProducts,
   LatestNews,
+  Promotion,
 };

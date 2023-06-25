@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const LatestNews = () => {
   return (
-    <section className="container mx-auto lg:p-0 mb-section-gap">
+    <section className="container mx-auto lg:p-0 mb-section-gap p-small-devices md:p-0">
       <div className="flex justify-between mb-2 md:mb-4 lg:mb-6">
         <p className="text-primary text-lg font-semibold">Latest News</p>
         <Link href="#" className="text-primary">
