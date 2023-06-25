@@ -43,13 +43,13 @@ const HeroCarousel = ({ products }) => {
           ))}
         </div>
       </div>
-      <div className="relative flex items-center justify-center w-full lg:w-1/2">
+      <div className="relative flex items-center justify-center lg:w-1/2 mt-6 lg:mt-0 p-small-devices lg:p-0">
         <Image
           src={`${products[activeIndex].image}`}
           alt={products[activeIndex].name}
           width={500}
           height={300}
-          className="rounded-lg ml-auto"
+          className="rounded-lg ml-auto object-contain"
         />
         <span className="absolute top-[65%] right-[15%] w-20 h-20 rounded-full bg-secondary flex justify-center items-center text-white font-semibold text-sm">
           only

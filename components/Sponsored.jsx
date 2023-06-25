@@ -11,10 +11,16 @@ const Sponsored = () => {
 
   return (
     <section className="bg-primary-light mb-section-gap py-8">
-      <div className="container mx-auto flex justify-around place-items-center">
+      <div className="container mx-auto flex gap-2 md:gap-4 lg:gap-8 justify-around place-items-center">
         {logos.map((logo, index) => (
           <div key={index} className="w-1/5 text-center">
-            <Image src={logo.src} alt={logo.alt} width={150} height={100} />
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={100}
+              height={75}
+              className="object-contain md:w-40 2xl:w-48"
+            />
           </div>
         ))}
       </div>

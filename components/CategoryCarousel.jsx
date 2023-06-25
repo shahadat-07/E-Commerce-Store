@@ -2,39 +2,16 @@
 import Image from "next/image";
 
 import { Navigation, A11y } from "swiper";
-
 import { Swiper, SwiperSlide } from "swiper/react";
+import { items } from "@/utilis";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 
-const items = [
-  {
-    title: "Laptop & Desktop",
-    image: "/hero-img.png",
-    quantity: "6",
-  },
-  {
-    title: "Speaker",
-    image: "/hero-img.png",
-    quantity: "6",
-  },
-  {
-    title: "DSLR Camera",
-    image: "/hero-img.png",
-    quantity: "6",
-  },
-  {
-    title: "Headphone",
-    image: "/hero-img.png",
-    quantity: "6",
-  },
-];
-
 const CategoryCarousel = () => {
   return (
-    <section className="container mx-auto mb-section-gap">
+    <section className="container mx-auto mb-section-gap p-small-devices sm:p-0">
       <Swiper
         modules={[Navigation, A11y]}
         spaceBetween={50}
@@ -66,6 +43,7 @@ const CategoryCarousel = () => {
                 alt={item.title}
                 width={120}
                 height={120}
+                className="object-contain"
               />
               <div>
                 <h3 className="text-lg text-primary">{item.title}</h3>

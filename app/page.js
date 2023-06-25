@@ -4,6 +4,8 @@ import {
   Testimonials,
   Features,
   Sponsored,
+  PopularProducts,
+  LatestNews,
 } from "@/components";
 
 export default function Home() {
@@ -11,9 +13,11 @@ export default function Home() {
     <main className="">
       <HeroCarousel />
       <CategoryCarousel />
+      {/* <PopularProducts /> */}
       <Features />
       <Testimonials />
       <Sponsored />
+      <LatestNews />
     </main>
   );
 }

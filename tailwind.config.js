@@ -16,6 +16,9 @@ module.exports = {
       margin: {
         "section-gap": "56px",
       },
+      padding: {
+        "small-devices": "16px",
+      },
     },
   },
   plugins: [],

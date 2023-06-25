@@ -8,6 +8,8 @@ import CategoryCarousel from "./CategoryCarousel";
 import Testimonials from "./Testimonials/Testimonials";
 import Features from "./Features";
 import Sponsored from "./Sponsored";
+import PopularProducts from "./PopularProducts";
+import LatestNews from "./LatestNews/LatestNews";
 
 export {
   TopBar,
@@ -20,4 +22,6 @@ export {
   Testimonials,
   Features,
   Sponsored,
+  PopularProducts,
+  LatestNews,
 };

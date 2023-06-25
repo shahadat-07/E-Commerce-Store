@@ -11,14 +11,14 @@ import Testimonial from "./Testimonial";
 
 const Testimonials = () => {
   return (
-    <section className="container mx-auto mb-section-gap">
+    <section className="container mx-auto mb-section-gap p-small-devices sm:p-0">
       <Swiper
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={50}
         slidesPerView={3}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
+        onSwiper={(swiper) => console.log()}
         onSlideChange={() => console.log("slide change")}
         breakpoints={{
           0: {

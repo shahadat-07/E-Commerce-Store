@@ -11,7 +11,7 @@ const Testimonial = ({ name, img }) => {
             height={100}
             src={img}
             alt="Next Image"
-            class="w-full h-auto md:mr-4 rounded-full"
+            class="w-full h-auto md:mr-4 rounded-full object-contain"
           />
         </div>
         <div class="md:w-3/4 flex items-center">
