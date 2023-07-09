@@ -11,6 +11,10 @@ import Sponsored from "./Sponsored";
 import PopularProducts from "./PopularProducts";
 import LatestNews from "./LatestNews/LatestNews";
 import Promotion from "./Promotion";
+import Size from "./SingleProductPage/Size";
+import Feature from "./SingleProductPage/Feature";
+import StarReviews from "./SingleProductPage/StarReviews";
+import ProductColor from "./SingleProductPage/ProductColor";
 
 export {
   TopBar,
@@ -26,4 +30,8 @@ export {
   PopularProducts,
   LatestNews,
   Promotion,
+  Size,
+  Feature,
+  StarReviews,
+  ProductColor,
 };

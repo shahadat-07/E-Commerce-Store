@@ -72,10 +72,7 @@ const Header = () => {
                   isMenuOpen ? "flex" : "hidden"
                 }`}
               >
-                <HeaderLinkContainer text="Home">
-                  <DropDownLink href="#" text="Dropdown 1" />
-                  <DropDownLink href="#" text="Dropdown 2" />
-                </HeaderLinkContainer>
+                <CustomLink href="/" text="Home" />
                 <HeaderLinkContainer text="Catalouge">
                   <DropDownLink href="#" text="Dropdown 1" />
                   <DropDownLink href="#" text="Dropdown 2" />
@@ -86,7 +83,7 @@ const Header = () => {
                   <DropDownLink href="#" text="Dropdown 2" />
                 </HeaderLinkContainer>
 
-                <CustomLink href="#" text="About us" />
+                <CustomLink href="/single-product-view" text="About us" />
               </ul>
             </div>
           </div>

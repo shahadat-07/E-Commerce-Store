@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { SearchBar } from "..";
 import Container from "../Container";
 import TopLinkContainer from "./TopLinkContainer";
+import Link from "next/link";
 
 const TopCartHeader = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,9 +21,9 @@ const TopCartHeader = () => {
           <div className="flex items-center justify-between h-24">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <span className="text-white text-lg font-semibold">
+                <Link href="/" className="text-white text-lg font-semibold">
                   E-Commerce Store
-                </span>
+                </Link>
               </div>
             </div>
             <div className="flex justify-center flex-grow">
